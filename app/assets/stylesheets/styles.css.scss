@@ -1,0 +1,28 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$btnPrimaryBackground: orange;
+
+/*Below: Sets base font and imports fontstyle;
+*/
+
+$baseFontFamily: Lato;
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+@import 'bootstrap';
+
+body{
+	padding-top: 60px;
+}
+
+@import 'bootstrap-responsive'; 
+
+.footer {
+
+	margin-top: 60px;
+	color: $grayLight;
+	a {
+		color:gray;
+	}
+}
