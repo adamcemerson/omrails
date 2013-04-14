@@ -20,7 +20,7 @@ Omrails::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  Paperclip.options[:command_path] = "/cygdrive/c/Program Files"
+  Paperclip.options[:command_path] = "/cygdrive/c/Program Files/ImageMagick-6.8.4-Q16/identify"
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
