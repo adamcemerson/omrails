@@ -16,6 +16,9 @@ Omrails::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
+  #sets path of paperclip to allow for image uploads in development
+  Paperclip.options[:command_path] = "/cygdrive/c/Program Files/ImageMagick-6.8.4-Q16/identify"
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
