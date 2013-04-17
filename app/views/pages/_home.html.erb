@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+	<h1>Welcome!</h1>
+<% else %>
+<div class="hero-unit">
+<h1>Welcome the Test Photo Website!</h1>
+<p>
+	You've found the place to upload photos...just to see what they look like!</br>
+	<%= link_to "Built on Test Photo Technology", "http://www.onemonthrails.com"%>
+</p>
+<p>
+	<%= link_to "Sign up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+</p>
+</div>
+<% end %>
