@@ -17,7 +17,7 @@ Omrails::Application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   #sets path of paperclip to allow for image uploads in development
-  Paperclip.options[:command_path] = "/cygdrive/c/Program Files/ImageMagick-6.8.4-Q16/identify"
+  #Paperclip.options[:command_path] = "/cygdrive/c/Program Files/ImageMagick-6.8.4-Q16/identify"
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -40,4 +40,14 @@ Omrails::Application.configure do
 
   # In production 
   config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+
+  #Configuring Amazon s3 for paperclip file uploads
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
 end
